@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Director Mode</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+
+        body {
+            background-color: #000;
+            color: #fff;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        
+            background-image: 
+                linear-gradient(rgba(0, 212, 255, 0.1) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(0, 212, 255, 0.1) 1px, transparent 1px);
+            background-size: 50px 50px;
+            background-position: center;
+        }
+
+        
+        .overlay {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            pointer-events: none; 
+        }
+
+      
+        .corner {
+            position: absolute;
+            width: 50px;
+            height: 50px;
+            border-color: #00d4ff;
+            border-style: solid;
+            transition: 0.5s;
+        }
+
+        .top-left { top: 0; left: 0; border-width: 3px 0 0 3px; }
+        .top-right { top: 0; right: 0; border-width: 3px 3px 0 0; }
+        .bottom-left { bottom: 0; left: 0; border-width: 0 0 3px 3px; }
+        .bottom-right { bottom: 0; right: 0; border-width: 0 3px 3px 0; }
+
+        
+        .rec-box {
+            position: absolute;
+            top: 30px;
+            right: 40px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: bold;
+            color: #ff3b3b;
+            font-size: 1.2rem;
+            letter-spacing: 2px;
+        }
+
+        .rec-dot {
+            width: 15px;
+            height: 15px;
+            background-color: #ff3b3b;
+            border-radius: 50%;
+            animation: blink 1s infinite;
+        }
+
+        /* Center Content */
+        .center-content {
+            text-align: center;
+            z-index: 10;
+        }
+
+        .logo-text {
+            font-size: 4rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 5px;
+            color: #fff;
+            position: relative;
+            
+            text-shadow: 2px 0 #00d4ff, -2px 0 #ff0055;
+            animation: glitch 2s infinite;
+        }
+
+        .sub-text {
+            color: #00d4ff;
+            font-size: 1rem;
+            margin-top: 10px;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        
+        .scan-line {
+            width: 0%;
+            height: 2px;
+            background: #fff;
+            margin: 20px auto 0;
+            box-shadow: 0 0 10px #00d4ff;
+            animation: scanLoad 3.5s linear forwards;
+        }
+
+        
+        .tech-info {
+            position: absolute;
+            bottom: 30px;
+            left: 40px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+            font-family: 'Courier New', monospace;
+        }
+
+        
+        @keyframes blink {
+            0% { opacity: 1; }
+            50% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes scanLoad {
+            0% { width: 0%; }
+            100% { width: 300px; }
+        }
+
+        @keyframes glitch {
+            0% { text-shadow: 2px 0 #00d4ff, -2px 0 #ff0055; transform: translate(0); }
+            20% { text-shadow: -2px 0 #00d4ff, 2px 0 #ff0055; transform: translate(-2px, 2px); }
+            40% { text-shadow: 2px 0 #00d4ff, -2px 0 #ff0055; transform: translate(2px, -2px); }
+            60% { text-shadow: 2px 0 #00d4ff, -2px 0 #ff0055; transform: translate(0); }
+            100% { text-shadow: 2px 0 #00d4ff, -2px 0 #ff0055; transform: translate(0); }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="overlay">
+        <div class="corner top-left"></div>
+        <div class="corner top-right"></div>
+        <div class="corner bottom-left"></div>
+        <div class="corner bottom-right"></div>
+
+        <div class="rec-box">
+            <div class="rec-dot"></div> REC
+        </div>
+
+        <div class="tech-info">
+            ISO 800 <br>
+            4K RAW <br>
+            AI_MODEL_V2.0
+        </div>
+    </div>
+
+    <div class="center-content">
+        <h1 class="logo-text">AI VISION</h1>
+        <p class="sub-text">Rendering World...</p>
+        <div class="scan-line"></div>
+    </div>
+
+    <script>
+       
+        setTimeout(() => {
+            
+            document.body.style.transform = "scaleY(0)"; 
+            document.body.style.transition = "transform 0.3s ease-in";
+
+            setTimeout(() => {
+                window.location.href = "home.html"; 
+            }, 300);
+
+        }, 3500); 
+    </script>
+
+</body>
+</html>

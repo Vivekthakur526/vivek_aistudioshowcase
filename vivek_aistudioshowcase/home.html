@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">AI <span>CREATIVE</span></div>
+        <p>Visual Showcase: Cinematic & Commercial AI</p>
+    </header>
+
+    <div class="filter-container">
+        <button class="btn active" onclick="filterVideos('all')">All</button>
+        <button class="btn" onclick="filterVideos('storytelling')">Storytelling</button>
+        <button class="btn" onclick="filterVideos('Realistic')">Realistic</button>
+        <button class="btn" onclick="filterVideos('product')">Product Ads</button>
+        <button class="btn" onclick="filterVideos('cinematic')">Cinematic</button>
+    </div>
+
+    <div class="gallery-container">
+
+        <div class="video-card" data-category="cinematic">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/End of Days Cinematic Horror.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>End of Days Cinematic Horror.mp4</h3>
+                <span class="tag">Cinematic</span>
+            </div>
+        </div>
+        
+        <div class="video-card" data-category="storytelling">
+            <div class="video-box">
+                <iframe src="/The Animated Farm Story.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>The Animated Farm Story</h3>
+                <span class="tag">Storytelling</span>
+            </div>
+        </div>
+
+       
+
+        <div class="video-card" data-category="cinematic">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/Beyond Pixels Where Imagination Becomes Reality.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>Where Imagination Becomes Reality</h3>
+                <span class="tag">Cinematic</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/Invisible Love The Pain of 'Why Not Me.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>The Pain of 'Why Not Me</h3>
+                <span class="tag">Realistic</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/Seamless Style A Fashion Transition Montage.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>A Fashion Transition Montage</h3>
+                <span class="tag">Realistic</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/Shadows in the Alley A Close Call.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>Shadows in the Alley A Close Call</h3>
+                <span class="tag">Realistic</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="storytelling">
+            <div class="video-box">
+                <video controls playsinline>
+                    <source src="/The Boy Lost his Mother.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="info">
+                <h3>The Boy Lost his Mother</h3>
+                <span class="tag">Storytelling</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <iframe src="/The Coffee Shop Romance.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>The Coffee Shop Romance</h3>
+                <span class="tag">Realistic</span>
+            </div>
+        </div>
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <iframe src="/The Lost Friendship.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>The Lost Friendship</h3>
+                <span class="tag">Realistic/span>
+            </div>
+        </div>
+        <div class="video-card" data-category="Realistic">
+            <div class="video-box">
+                <iframe src="/The Tragic Love Story.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>The Tragic Love Story</h3>
+                <span class="tag">Realistic</span>
+            </div>
+        </div>
+
+         <div class="video-card" data-category="Storytelling">
+            <div class="video-box">
+                <iframe src="/Puppy Love The Cutest Animated Proposal.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>Puppy Love The Cutest Animated Proposal</h3>
+                <span class="tag">storytelling</span>
+            </div>
+        </div>
+
+         <div class="video-card" data-category="product">
+            <div class="video-box">
+                <iframe src="/No More Tears The Smart Kitchen Solution.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>No More Tears The Smart Kitchen Solution</h3>
+                <span class="tag">Product Ads</span>
+            </div>
+        </div>
+
+        <div class="video-card" data-category="product">
+            <div class="video-box">
+                <iframe src="/The Beast is Here Pulsar NS200 UG.mp4" frameborder="0" allowfullscreen></iframe>
+            </div>
+            <div class="info">
+                <h3>The Beast is Here Pulsar NS200UG</h3>
+                <span class="tag">Product Ads</span>
+            </div>
+        </div>
+        
+    <footer>
+        <div class="footer-content">
+            
+            <div class="footer-section about">
+                <h2>Vivek Thakur </h2> 
+                <p>&copy; <span id="year"></span> | AI Video Creator</p>
+            </div>
+
+            <div class="footer-section social-links">
+                <a href="https://www.instagram.com/vivek_thakur_a1/" target="_blank" class="social-btn">
+                    <i class="fab fa-instagram"></i> <span>Instagram</span>
+                </a>
+                <a href="mailto:vivek1722j@gmail.com" class="social-btn">
+    <i class="fas fa-envelope"></i> <span>Gmail</span>
+</a>
+
+                <a href="https://www.linkedin.com/in/vivek-thakur-b06876278?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-btn">
+                    <i class="fab fa-linkedin"></i> <span>LinkedIn</span>
+                </a>
+            </div>
+            
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
