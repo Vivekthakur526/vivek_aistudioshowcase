@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
 
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,24 +8,26 @@
     font-family: 'Poppins', sans-serif;
 }
 
-
-body {
+/* Global Settings - Scroll Fix Here */
+html, body {
+    width: 100%;
+    overflow-x: hidden; /* Ye right-left movement rokega */
     background-color: #0f0f13;
     color: #fff;
     text-align: center;
-    
-    
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    padding-bottom: 80px; /* Footer ke liye jagah taaki content chupe na */
 }
 
-
+/* Header Styling */
 header {
-    width: 100%; /* Ye ensure karega ki header puri width le */
+    width: 100%;
+    max-width: 100vw; /* Screen se bahar nahi jayega */
     padding: 50px 20px;
     background: radial-gradient(circle, #1a1a2e 0%, #0f0f13 100%);
-    display: flex; /* Content ko center karne ke liye */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -54,6 +57,7 @@ header p {
     justify-content: center;
     flex-wrap: wrap;
     gap: 15px;
+    padding: 0 10px; /* Mobile pe buttons edge se na ch chipkein */
 }
 
 .btn {
@@ -76,19 +80,19 @@ header p {
     transform: scale(1.05);
 }
 
-
+/* Gallery Grid - UPDATED SIZE */
 .gallery-container {
-    
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-    gap: 30px;
+    /* 320px ko 280px kiya taaki mobile me fit aaye */
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); 
+    gap: 20px;
     padding: 20px 5%;
     max-width: 1400px;
+    width: 100%;
     margin: 0 auto;
-    
-    
     flex: 1; 
 }
+
 .video-card {
     background: #16161d;
     border-radius: 12px;
@@ -96,6 +100,7 @@ header p {
     transition: 0.3s;
     border: 1px solid #2a2a35;
     position: relative;
+    width: 100%; /* Ensure card fits grid */
 }
 
 .video-card:hover {
@@ -110,7 +115,6 @@ header p {
     background: #000;
     position: relative;
 }
-
 
 .video-box iframe, 
 .video-box video {
@@ -144,7 +148,6 @@ header p {
     letter-spacing: 0.5px;
 }
 
-
 .hide {
     display: none;
 }
@@ -156,10 +159,9 @@ footer {
     left: 0;
     width: 100%;
     z-index: 1000; 
-    
     background-color: #16161d;
     border-top: 1px solid #2a2a35;
-    padding: 20px 5%;
+    padding: 15px 5%; /* Padding thodi kam ki */
     color: #fff;
     box-shadow: 0 -5px 20px rgba(0,0,0,0.5); 
 }
@@ -172,28 +174,26 @@ footer {
     margin: 0 auto;
 }
 
-
 .footer-section.about h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #00d4ff;
-    margin-bottom: 5px;
+    margin-bottom: 2px;
 }
 
 .footer-section.about p {
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     color: #888;
 }
 
-
 .social-links {
     display: flex;
-    gap: 20px;
+    gap: 15px;
 }
 
 .social-btn {
     text-decoration: none;
     color: #bbb;
-    font-size: 1.2rem; 
+    font-size: 1.1rem; 
     transition: 0.3s;
     display: flex;
     align-items: center;
@@ -205,27 +205,33 @@ footer {
     display: none; 
 }
 
-
 .social-btn:hover {
     color: #00d4ff;
     transform: translateY(-3px);
 }
 
+@media (min-width: 768px) {
+    .social-btn span {
+        display: block; 
+    }
+}
 
-
-/* Mobile Devices ke liye Adjustment */
+/* Mobile Specific Adjustments */
 @media (max-width: 768px) {
     header {
-        width: 100%;
-        padding: 30px 15px; /* Mobile par padding thodi kam rakhein */
+        padding: 30px 15px;
     }
 
     header .logo {
-        font-size: 2rem; /* Logo ka size thoda chhota karein taaki screen se bahar na jaye */
+        font-size: 2rem;
     }
 
     header p {
-        font-size: 0.9rem; /* Subtitle ko bhi adjust karein */
-        padding: 0 10px; /* Thoda side space */
+        font-size: 0.9rem;
+        padding: 0 10px;
+    }
+    
+    .gallery-container {
+        padding: 20px 10px; /* Mobile pe side gap kam kiya */
     }
 }
