@@ -21,8 +21,13 @@ body {
 
 
 header {
+    width: 100%; /* Ye ensure karega ki header puri width le */
     padding: 50px 20px;
     background: radial-gradient(circle, #1a1a2e 0%, #0f0f13 100%);
+    display: flex; /* Content ko center karne ke liye */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 header .logo {
@@ -207,8 +212,20 @@ footer {
 }
 
 
-@media (min-width: 768px) {
-    .social-btn span {
-        display: block; 
+
+/* Mobile Devices ke liye Adjustment */
+@media (max-width: 768px) {
+    header {
+        width: 100%;
+        padding: 30px 15px; /* Mobile par padding thodi kam rakhein */
+    }
+
+    header .logo {
+        font-size: 2rem; /* Logo ka size thoda chhota karein taaki screen se bahar na jaye */
+    }
+
+    header p {
+        font-size: 0.9rem; /* Subtitle ko bhi adjust karein */
+        padding: 0 10px; /* Thoda side space */
     }
 }
